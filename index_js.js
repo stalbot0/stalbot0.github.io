@@ -32,14 +32,23 @@ function switchActiveClassesExperienceSection(addActive, addBlock, removeActive,
 }
 
 codeupExperience.addEventListener('click', function () {
-    switchActiveClassesExperienceSection(codeupExperience, codeupExperienceContent, codeupProjects, codeupProjectsContent, militaryExperience, militaryExperienceContent)
+    switchActiveClassesExperienceSection(
+        codeupExperience, codeupExperienceContent, codeupProjects,
+        codeupProjectsContent, militaryExperience, militaryExperienceContent
+    )
 })
 
 codeupProjects.addEventListener('click', function () {
-    switchActiveClassesExperienceSection(codeupProjects, codeupProjectsContent, codeupExperience, codeupExperienceContent, militaryExperience, militaryExperienceContent)
+    switchActiveClassesExperienceSection(
+        codeupProjects, codeupProjectsContent, codeupExperience,
+        codeupExperienceContent, militaryExperience, militaryExperienceContent
+    )
 })
 
 militaryExperience.addEventListener('click', function () {
-    switchActiveClassesExperienceSection(militaryExperience, militaryExperienceContent, codeupExperience, codeupExperienceContent, codeupProjects, codeupProjectsContent)
+    switchActiveClassesExperienceSection(
+        militaryExperience, militaryExperienceContent, codeupExperience,
+        codeupExperienceContent, codeupProjects, codeupProjectsContent
+    )
 })
 
