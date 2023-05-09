@@ -33,7 +33,7 @@
 </header>
 
 <main>
-    <div id="general-info">
+    <section id="general-info">
         <div class="align-self-center left-general-info">
             <div class="small-font-intro1">Hello, my name is</div>
             <div class="name-font-intro">Stephen Talbot</div>
@@ -43,8 +43,9 @@
             <img src="toon_talbot.png" alt="Stephen Talbot Cartoon Profile Photo"
                  class="toon-img-general-info">
         </div>
-    </div>
-    <div id="about">
+    </section>
+
+    <section id="about">
         <p class="about-header">About Me</p>
         <p class="about-p">My name is Stephen Talbot, and I am a full-stack software developer with a focus in back-end
             development. My passion for making the world a better place through STEM derives from my background in
@@ -62,15 +63,28 @@
             that wants to collaborate, or you'd just like to stop by and say hello, please feel free to
             <a href="#contact" class="about-a">contact</a> me below.
         </p>
-    </div>
+    </section>
 
-    <div id="my-work">
+    <section id="my-work">
+        <p class="mywork-header">My Experience/Projects</p>
+        <div class="mywork-container">
+            <div id="vertical-border-gradient"></div>
+            <div class="mywork-left">
+                <a class="mywork-a" id="codeup-experience" href="#codeup-experience-content">CODEUP</a>
+                <a class="mywork-a" id="codeup-projects" href="#codeup-projects-content">CODEUP PROJECTS</a>
+                <a class="mywork-a" id="military-experience" href="#military-experience-content">UNITED STATES ARMY</a>
+            </div>
+            <div class="mywork-right">
+                <p class="mywork-p" id="codeup-experience-content">Codeup Experience Content</p>
+                <p class="mywork-p" id="codeup-projects-content">Codep Projects Content</p>
+                <p class="mywork-p" id="military-experience-content">Military Experience Content</p>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <section id="contact">
 
-    <div id="contact">
-
-    </div>
+    </section>
 </main>
 
 <footer>
@@ -78,5 +92,6 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="index_js.js"></script>
 </body>
 </html>
