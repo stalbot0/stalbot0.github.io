@@ -333,5 +333,144 @@ nav {
 }
 
 @media screen and (max-width: 800px) {
+    .nav-anchor {
+        font-size: 1em;
+    }
 
+    .right-general-info {
+        margin-right: 4em;
+    }
+
+    .about-header, .mywork-header, .contact-header {
+        font-size: 2em;
+    }
+
+    .about-p, .about-a, .mywork-p, .mywork-a, .contact-p {
+        font-size: 0.9em;
+    }
+
+    #vertical-border-gradient {
+        height: 11.75em;
+    }
+
+    .contact-button {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #general-info {
+        flex-direction: column;
+        justify-content: center;
+        padding: 2em 0;
+        height: 100%;
+    }
+
+    .left-general-info {
+        margin: auto auto 2em auto;
+        text-align: center;
+    }
+
+    .right-general-info {
+        margin: auto
+    }
+}
+
+@media screen and (max-width: 595px) {
+    nav {
+        margin: auto 1em;
+    }
+
+    #about, #my-work {
+        margin: 2em 1em;
+    }
+
+    #contact {
+        padding: 2em 1em;
+    }
+
+    .about-header, .mywork-header, .contact-header {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .small-font-intro1, .small-font-intro2 {
+        font-size: 1em;
+    }
+
+    .about-header, .mywork-header, .contact-header {
+        font-size: 1.4em;
+    }
+
+    .name-font-intro {
+        font-size: 1.6em;
+    }
+}
+
+@media screen and (max-width: 466px) {
+    nav {
+        justify-content: center;
+        height: 4em;
+        margin: 0;
+    }
+
+    a.nav-anchor-img {
+        display: none;
+    }
+
+    #general-info {
+        padding: 0 0 2em 0;
+    }
+
+    .toon-img-general-info {
+        height: 9em;
+        width: 9em;
+    }
+
+    .mywork-p {
+        font-size: 0.75em;
+    }
+}
+
+@media screen and (max-width: 359px) {
+    .nav-anchor {
+        font-size: 0.75em;
+    }
+
+    .about-header, .mywork-header, .contact-header {
+        font-size: 1.15em;
+    }
+
+    .about-p, .contact-p {
+        font-size: 0.7em;
+    }
+
+    .mywork-right {
+        margin-left: 1.5em;
+    }
+
+    .mywork-p {
+        font-size: 0.65em;
+    }
+
+    .button-icons-div {
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 1em;
+    }
+
+    .contact-p {
+        text-align: center;
+    }
+
+    .contact-button {
+        font-size: 0.6em;
+        margin-bottom: 1em;
+    }
+
+    .contact-icon {
+        font-size: 1.3em;
+        margin: 1.4em 0.5em;
+    }
 }
