@@ -37,8 +37,8 @@
     <section id="general-info">
         <div class="align-self-center left-general-info">
             <div class="small-font-intro1">Hello, my name is</div>
-            <div class="name-font-intro">Stephen Talbot</div>
-            <div class="small-font-intro2">Full-Stack Software Engineer in Austin, Texas</div>
+            <div id="my-name-header" class="name-font-intro">Stephen Talbot</div>
+            <div class="small-font-intro2"><span class="auto-type"></span></div>
         </div>
         <div class="align-self-center right-general-info">
             <img src="toon_talbot.png" alt="Stephen Talbot Cartoon Profile Photo"
@@ -48,9 +48,9 @@
 
     <section id="about">
         <p class="about-header">About Me</p>
-        <p class="about-p">My name is Stephen Talbot, and I am a full-stack software developer with a focus in back-end
-            development. My passion for making the world a better place through STEM derives from my background in
-            Chemistry, while my unrelenting drive for success comes from my experience in the US Army</p>
+        <p class="about-p">My name is Stephen Talbot, and I am a full-stack software developer located in Austin, Texas 
+            with a focus in back-end / full-stack development. My passion for making the world a better place through STEM 
+            derives from my background in Chemistry, while my unrelenting drive for success comes from my experience in the US Army</p>
         <p class="about-p">As a recent graduate from <a href="https://codeup.com/" class="about-a">Codeup</a>,
             I am eager to explore the vast realm of software development. With the constant changes in technology,
             keeping current with new/updated languages, libraries, frameworks is crucial for my success as a developer.
@@ -138,5 +138,17 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="index_js.js"></script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script>
+    var smiley = ";)";
+    var typed = new Typed(".auto-type", {
+        strings: ["Full-Stack Software Engineer ", "JavaBean Connoisseur ", "Code Exterminator\/Bug Killer", "Semicolon Lover", "Drummer\/Music Enthusiast "],
+        typeSpeed: 40,
+        backSpeed: 30,
+        loop: true,
+        backDelay: 2000,
+    });
+
+</script>
 </body>
 </html>

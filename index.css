@@ -4,6 +4,16 @@
 #212B3A dark blue used on tether login buttons
 */
 
+/* KEY FRAMES FOR ANIMATION */
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
 /* DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP */
 /* nav */
 * {
@@ -112,6 +122,11 @@ nav {
 .small-font-intro2 {
     margin-top: 0.5em;
 }
+
+/* old animation for name/info to slide in. Going to take a different approach... */
+/* .left-general-info  {
+    animation: 1s ease-out 0s 1 slideInLeft;
+} */
 
 .name-font-intro {
     font-family: "Space Mono", sans-serif!important;
@@ -307,6 +322,12 @@ nav {
 
     #contact {
         padding: 4em 8em;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .small-font-intro1, .small-font-intro2 {
+        font-size: 1em;
     }
 }
 

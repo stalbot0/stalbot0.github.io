@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     codeupExperienceContent.style.display = 'block';
     codeupProjectsContent.style.display = 'none';
     militaryExperienceContent.style.display = 'none';
-})
+});
 
 function switchActiveClassesExperienceSection(addActive, addBlock, removeActive, removeBlock, removeActive2, removeBlock2) {
     addActive.classList.add('active');
@@ -36,19 +36,18 @@ codeupExperience.addEventListener('click', function () {
         codeupExperience, codeupExperienceContent, codeupProjects,
         codeupProjectsContent, militaryExperience, militaryExperienceContent
     )
-})
+});
 
 codeupProjects.addEventListener('click', function () {
     switchActiveClassesExperienceSection(
         codeupProjects, codeupProjectsContent, codeupExperience,
         codeupExperienceContent, militaryExperience, militaryExperienceContent
     )
-})
+});
 
 militaryExperience.addEventListener('click', function () {
     switchActiveClassesExperienceSection(
         militaryExperience, militaryExperienceContent, codeupExperience,
         codeupExperienceContent, codeupProjects, codeupProjectsContent
     )
-})
-
+});
