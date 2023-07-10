@@ -4,89 +4,164 @@
 #212B3A dark blue used on tether login buttons
 */
 
-/* KEY FRAMES FOR ANIMATION */
-@keyframes slideInLeft {
+/* WAVES ON PAGE
+@keyframes move_wave {
     0% {
-      transform: translateX(-100%);
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
     }
     100% {
-      transform: translateX(0);
+        transform: translateX(-50%) translateZ(0) scaleY(1)
     }
+}
+.waveWrapper {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: transparent;
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}
+
+/* KEY FRAMES FOR TYPING ANIMATION */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
   }
+  100% {
+    transform: translateX(0);
+  }
+} */
 
 /* DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP */
 /* nav */
 * {
-    font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
-    background-color: #FEA99DFF;
+  background-color: #fea99dff;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    margin: auto 14em;
-    height: 7em;
-    padding-top: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  margin: auto 14em;
+  height: 7em;
+  padding-top: 0.5em;
 }
 
 .align-self-center {
-    align-self: center;
+  align-self: center;
 }
 
 .elemental-img-nav {
-    width: 6em;
-    height: 6em;
+  width: 6em;
+  height: 6em;
 }
 
 .elemental-img-nav:hover {
-    border: 0.03em solid black;
+  border: 0.03em solid black;
 }
 
 .nav-anchor {
-    text-decoration: none;
-    color: #212B3A;
-    font-size: 1.15em;
-    letter-spacing: 0.1em;
-    margin: auto 0.75em;
-    padding: 0.5em;
-    border-radius: 0.5em;
+  text-decoration: none;
+  color: #212b3a;
+  font-size: 1.15em;
+  letter-spacing: 0.1em;
+  margin: auto 0.75em;
+  padding: 0.5em;
+  border-radius: 0.5em;
 }
 
 /*https://github.com/IanLunn/Hover/blob/master/css/hover.css*/
 .hvr-rectangle-out {
-    display: inline-block;
-    vertical-align: middle;
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    position: relative;
-    background-color: transparent;
-    transition-property: color;
-    transition-duration: 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  background-color: transparent;
+  transition-property: color;
+  transition-duration: 0.3s;
 }
 
 .hvr-rectangle-out:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: #212B3A;
-    transform: scale(0);
-    transition-property: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #212b3a;
+  transform: scale(0);
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
 }
-.hvr-rectangle-out:hover, .hvr-rectangle-out:focus, .hvr-rectangle-out:active {
-    color: #ffffff;
+.hvr-rectangle-out:hover,
+.hvr-rectangle-out:focus,
+.hvr-rectangle-out:active {
+  color: #ffffff;
 }
 
-.hvr-rectangle-out:hover:before, .hvr-rectangle-out:focus:before, .hvr-rectangle-out:active:before {
-    transform: scale(1);
+.hvr-rectangle-out:hover:before,
+.hvr-rectangle-out:focus:before,
+.hvr-rectangle-out:active:before {
+  transform: scale(1);
 }
 
 /*.nav-gradient-bottom {*/
@@ -95,32 +170,31 @@ nav {
 /*    height: 0.5em;*/
 /*}*/
 
-
-
 /* MAIN */
 /* general info opener */
 #general-info {
-    color: #212B3A;
-    background-color: #FEA99DFF;
-    height: 65vh;
-    /*border: 1px solid black;*/
-    padding-bottom: 3em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  color: #212b3a;
+  background-color: #fea99dff;
+  height: 65vh;
+  /*border: 1px solid black;*/
+  padding-bottom: 3em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .left-general-info {
-    margin-left: 14em;
+  margin-left: 14em;
 }
 
-.small-font-intro1, .small-font-intro2 {
-    font-size: 1.15em;
-    letter-spacing: 0.1em;
+.small-font-intro1,
+.small-font-intro2 {
+  font-size: 1.15em;
+  letter-spacing: 0.1em;
 }
 
 .small-font-intro2 {
-    margin-top: 0.5em;
+  margin-top: 0.5em;
 }
 
 /* old animation for name/info to slide in. Going to take a different approach... */
@@ -129,369 +203,395 @@ nav {
 } */
 
 .name-font-intro {
-    font-family: "Space Mono", sans-serif!important;
-    font-size: 4em;
+  font-family: "Space Mono", sans-serif !important;
+  font-size: 4em;
 }
 
 .right-general-info {
-    margin-right: 12em;
+  margin-right: 12em;
 }
 
 .toon-img-general-info {
-    height: 30em;
-    width: 30em;
+  height: 30em;
+  width: 30em;
 }
 
 /* about me/my work */
 #vertical-border-gradient {
-    height: 13.5em;
-    background-color: #FEA99DFF;
-    background-image: linear-gradient(#FEA99DFF, #212B3A);
-    width: 0.25em;
-    margin-right: 1em;
+  height: 13.5em;
+  background-color: #fea99dff;
+  background-image: linear-gradient(#fea99dff, #212b3a);
+  width: 0.25em;
+  margin-right: 1em;
 }
 
-#about, #my-work {
-    margin: 7em 24em;
-    color: #212B3A;
+#about,
+#my-work {
+  margin: 7em 24em;
+  color: #212b3a;
 }
 
-.about-header, .mywork-header {
-    font-family: "Space Mono", sans-serif!important;
-    font-size: 2.7em;
-    letter-spacing: 0.05em;
-    color: #FEA99DFF!important;
+.about-header,
+.mywork-header {
+  font-family: "Space Mono", sans-serif !important;
+  font-size: 2.7em;
+  letter-spacing: 0.05em;
+  color: #fea99dff !important;
 }
 
-.about-p, .about-a, .mywork-p, .contact-p {
-    font-size: 1.05em;
-    letter-spacing: 0.04em;
-    line-height: 1.7em;
+.about-p,
+.about-a,
+.mywork-p,
+.contact-p {
+  font-size: 1.05em;
+  letter-spacing: 0.04em;
+  line-height: 1.7em;
 }
 
-.about-p, .mywork-p {
-    margin-bottom: 1.4em;
+.about-p,
+.mywork-p {
+  margin-bottom: 1.4em;
 }
 
 .about-a {
-    color: #FEA99DFF;
-    text-decoration: none;
+  color: #fea99dff;
+  text-decoration: none;
 }
 
-.about-a:hover, .mywork-a:hover {
-    color: #78a3f6;
+.about-a:hover,
+.mywork-a:hover {
+  color: #78a3f6;
 }
 
 /*my work*/
 .mywork-container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .mywork-left {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .mywork-a {
-    text-decoration: none;
-    color: #212B3A;
-    font-size: 1.05em;
-    letter-spacing: 0.04em;
-    line-height: 1.7em;
-    margin-bottom: 1.4em;
+  text-decoration: none;
+  color: #212b3a;
+  font-size: 1.05em;
+  letter-spacing: 0.04em;
+  line-height: 1.7em;
+  margin-bottom: 1.4em;
 }
 
 .active {
-    color: #FEA99DFF;
-    font-size: 1.05em;
-    letter-spacing: 0.04em;
-    line-height: 1.7em;
-    text-decoration: none;
-    margin-bottom: 1.4em;
+  color: #fea99dff;
+  font-size: 1.05em;
+  letter-spacing: 0.04em;
+  line-height: 1.7em;
+  text-decoration: none;
+  margin-bottom: 1.4em;
 }
 
 .mywork-right {
-    margin-left: 3em;
-    /*flex-grow: 1;*/
+  margin-left: 3em;
+  /*flex-grow: 1;*/
 }
 
 /* contact me */
 #contact {
-    background-color: #212B3A;
-    color: white;
-    padding: 4em 24em;
+  background-color: #212b3a;
+  color: white;
+  padding: 4em 24em;
 }
 
 .contact-header {
-    font-family: "Space Mono", sans-serif!important;
-    font-size: 2.7em;
-    letter-spacing: 0.05em;
+  font-family: "Space Mono", sans-serif !important;
+  font-size: 2.7em;
+  letter-spacing: 0.05em;
 }
 
 .contact-p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .button-icons-div {
-    margin-top: 1.8em;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  margin-top: 1.8em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .contact-button {
-    border: none;
-    background-color: white;
-    color: #FEA99DFF;
-    text-align: center;
-    width: 10em;
-    height: 3em;
-    /*margin-top: 1.8em;*/
-    border-radius: 0.25em;
-    font-size: 1.3em;
+  border: none;
+  background-color: white;
+  color: #fea99dff;
+  text-align: center;
+  width: 10em;
+  height: 3em;
+  /*margin-top: 1.8em;*/
+  border-radius: 0.25em;
+  font-size: 1.3em;
 }
 
 .contact-button:hover {
-    color: #212B3A;
-    background-color: #FEA99DFF;
+  color: #212b3a;
+  background-color: #fea99dff;
 }
 
 .contact-icon {
-    color: white;
-    font-size: 3em;
-    text-align: center;
-    margin: auto 0.25em;
+  color: white;
+  font-size: 3em;
+  text-align: center;
+  margin: auto 0.25em;
 }
 
 .contact-icon:hover {
-    color: #FEA99DFF;
+  color: #fea99dff;
 }
-
 
 /*LAPTOP MEDIA QUERY (small changes from 4K)*/
 @media screen and (max-width: 1444px) {
-    nav {
-        margin: auto 8em;
-    }
+  nav {
+    margin: auto 8em;
+  }
 
-    .left-general-info {
-        margin-left: 8em;
-    }
+  .left-general-info {
+    margin-left: 8em;
+  }
 
-    .right-general-info {
-        margin-right: 6em;
-    }
+  .right-general-info {
+    margin-right: 6em;
+  }
 
-    #about, #my-work {
-        margin: 7em 15em;
-    }
+  #about,
+  #my-work {
+    margin: 7em 15em;
+  }
 
-    #contact {
-        padding: 4em 15em;
-    }
+  #contact {
+    padding: 4em 15em;
+  }
 }
 
 @media screen and (max-width: 1153px) {
-    .elemental-img-nav {
-        height: 5em;
-        width: 5em;
-    }
+  .elemental-img-nav {
+    height: 5em;
+    width: 5em;
+  }
 
-    .name-font-intro {
-        font-size: 3em;
-    }
+  .name-font-intro {
+    font-size: 3em;
+  }
 
-    .small-font-intro1, .small-font-intro2 {
-        /*font-size: 1em;*/
-    }
+  .small-font-intro1,
+  .small-font-intro2 {
+    /*font-size: 1em;*/
+  }
 
-    .toon-img-general-info {
-        height: 22em;
-        width: 22em;
-    }
+  .toon-img-general-info {
+    height: 22em;
+    width: 22em;
+  }
 
-    .right-general-info {
-        margin-right: 10em;
-    }
+  .right-general-info {
+    margin-right: 10em;
+  }
 
-    #about, #my-work {
-        margin: 5em 8em;
-    }
+  #about,
+  #my-work {
+    margin: 5em 8em;
+  }
 
-    #contact {
-        padding: 4em 8em;
-    }
+  #contact {
+    padding: 4em 8em;
+  }
 }
 
 @media screen and (max-width: 930px) {
-    .small-font-intro1, .small-font-intro2 {
-        font-size: 1em;
-    }
+  .small-font-intro1,
+  .small-font-intro2 {
+    font-size: 1em;
+  }
 }
 
 @media screen and (max-width: 870px) {
-    nav {
-        margin: auto 4em;
-    }
+  nav {
+    margin: auto 4em;
+  }
 
-    .left-general-info {
-        margin-left: 4em;
-    }
+  .left-general-info {
+    margin-left: 4em;
+  }
 
-    .right-general-info {
-        margin-right: 6em;
-    }
+  .right-general-info {
+    margin-right: 6em;
+  }
 
-    #about, #my-work {
-        margin: 4em 4em;
-    }
+  #about,
+  #my-work {
+    margin: 4em 4em;
+  }
 
-    #contact {
-        padding: 4em 4em;
-    }
+  #contact {
+    padding: 4em 4em;
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .nav-anchor {
-        font-size: 1em;
-    }
+  .nav-anchor {
+    font-size: 1em;
+  }
 
-    .right-general-info {
-        margin-right: 4em;
-    }
+  .right-general-info {
+    margin-right: 4em;
+  }
 
-    .about-header, .mywork-header, .contact-header {
-        font-size: 2em;
-    }
+  .about-header,
+  .mywork-header,
+  .contact-header {
+    font-size: 2em;
+  }
 
-    .about-p, .about-a, .mywork-p, .mywork-a, .contact-p {
-        font-size: 0.9em;
-    }
+  .about-p,
+  .about-a,
+  .mywork-p,
+  .mywork-a,
+  .contact-p {
+    font-size: 0.9em;
+  }
 
-    #vertical-border-gradient {
-        height: 11.75em;
-    }
+  #vertical-border-gradient {
+    height: 11.75em;
+  }
 
-    .contact-button {
-        font-size: 1em;
-    }
+  .contact-button {
+    font-size: 1em;
+  }
 }
 
 @media screen and (max-width: 700px) {
-    #general-info {
-        flex-direction: column;
-        justify-content: center;
-        padding: 2em 0;
-        height: 100%;
-    }
+  #general-info {
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em 0;
+    height: 100%;
+  }
 
-    .left-general-info {
-        margin: auto auto 2em auto;
-        text-align: center;
-    }
+  .left-general-info {
+    margin: auto auto 2em auto;
+    text-align: center;
+  }
 
-    .right-general-info {
-        margin: auto
-    }
+  .right-general-info {
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 595px) {
-    nav {
-        margin: auto 1em;
-    }
+  nav {
+    margin: auto 1em;
+  }
 
-    #about, #my-work {
-        margin: 2em 1em;
-    }
+  #about,
+  #my-work {
+    margin: 2em 1em;
+  }
 
-    #contact {
-        padding: 2em 1em;
-    }
+  #contact {
+    padding: 2em 1em;
+  }
 
-    .about-header, .mywork-header, .contact-header {
-        text-align: center;
-    }
+  .about-header,
+  .mywork-header,
+  .contact-header {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 499px) {
-    .small-font-intro1, .small-font-intro2 {
-        font-size: 1em;
-    }
+  .small-font-intro1,
+  .small-font-intro2 {
+    font-size: 1em;
+  }
 
-    .about-header, .mywork-header, .contact-header {
-        font-size: 1.4em;
-    }
+  .about-header,
+  .mywork-header,
+  .contact-header {
+    font-size: 1.4em;
+  }
 
-    .name-font-intro {
-        font-size: 1.6em;
-    }
+  .name-font-intro {
+    font-size: 1.6em;
+  }
 }
 
 @media screen and (max-width: 466px) {
-    nav {
-        justify-content: center;
-        height: 4em;
-        margin: 0;
-    }
+  nav {
+    justify-content: center;
+    height: 4em;
+    margin: 0;
+  }
 
-    a.nav-anchor-img {
-        display: none;
-    }
+  a.nav-anchor-img {
+    display: none;
+  }
 
-    #general-info {
-        padding: 0 0 2em 0;
-    }
+  #general-info {
+    padding: 0 0 2em 0;
+  }
 
-    .toon-img-general-info {
-        height: 9em;
-        width: 9em;
-    }
+  .toon-img-general-info {
+    height: 9em;
+    width: 9em;
+  }
 
-    .mywork-p {
-        font-size: 0.75em;
-    }
+  .mywork-p {
+    font-size: 0.75em;
+  }
 }
 
 @media screen and (max-width: 359px) {
-    .nav-anchor {
-        font-size: 0.75em;
-    }
+  .nav-anchor {
+    font-size: 0.75em;
+  }
 
-    .about-header, .mywork-header, .contact-header {
-        font-size: 1.15em;
-    }
+  .about-header,
+  .mywork-header,
+  .contact-header {
+    font-size: 1.15em;
+  }
 
-    .about-p, .contact-p {
-        font-size: 0.7em;
-    }
+  .about-p,
+  .contact-p {
+    font-size: 0.7em;
+  }
 
-    .mywork-right {
-        margin-left: 1.5em;
-    }
+  .mywork-right {
+    margin-left: 1.5em;
+  }
 
-    .mywork-p {
-        font-size: 0.65em;
-    }
+  .mywork-p {
+    font-size: 0.65em;
+  }
 
-    .button-icons-div {
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 1em;
-    }
+  .button-icons-div {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1em;
+  }
 
-    .contact-p {
-        text-align: center;
-    }
+  .contact-p {
+    text-align: center;
+  }
 
-    .contact-button {
-        font-size: 0.6em;
-        margin-bottom: 1em;
-    }
+  .contact-button {
+    font-size: 0.6em;
+    margin-bottom: 1em;
+  }
 
-    .contact-icon {
-        font-size: 1.3em;
-        margin: 1.4em 0.5em;
-    }
+  .contact-icon {
+    font-size: 1.3em;
+    margin: 1.4em 0.5em;
+  }
 }
